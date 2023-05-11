@@ -12,7 +12,6 @@ int ReadInput();
 void AddNode(int x);
 void display(Node *head);
 int ReadDeletNode();
-int length(Node *head);
 Node *DeletNode(int z,Node *head,int b);
 
 int main(){int number,nbrNode,value;
@@ -70,20 +69,6 @@ int ReadDeletNode()
   printf("Enter the node to be deleted: ");
   scanf("%d",&a);
   return a;
-}
-
-int length(Node *head){
-	if(head==NULL){
-		printf("list is empty");
-		return -1;
-	}else{
-		p=head;int c=0;
-		do{
-			p=p->next;
-			c++;
-		}while(p!=head);
-		return c;
-	}
 }
 
 Node *DeletNode(int z,Node *head,int b){
